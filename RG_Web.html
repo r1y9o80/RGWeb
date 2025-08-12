@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="./RG_Web.css" />
-  <title>[公式]RG戦隊</title>
+  <title>公式｜RG戦隊 - RGゲーミング｜第五人格チーム紹介</title>
+  <meta name="description" content="公式第五人格チーム「RG戦隊」の紹介サイト。選手プロフィールや戦績、チームの歴史や最新情報を掲載。初心者からファンまで楽しめる内容が満載。" />
 </head>
 <body class="body">
   <header class="header">
@@ -18,7 +19,7 @@
   </header>
 
   <div class="team-intro">
-    <h1>チーム紹介</h1>
+    <h2>チーム紹介</h2>
     <div class="team-intro-box">
       <img src="./imgs/stand.png" alt="チームイメージ" />
       <p>プレイヤー５人からなる第五人格チーム。第五人格を愛するメンバーが集まったRGチームは、日々練習と試合を重ねながら着実に力をつけている。個人のスキルアップだけでなく、チームとしての連携や戦術の共有にも力を入れており、互いに意見を出し合いながら切磋琢磨している。勝ち負けにこだわるだけでなく、ゲームの楽しさを忘れず、プレイの過程や仲間とのコミュニケーションを大切にしているのがチームの特徴だ。時には失敗や悔しい思いを経験しながらも、それを次の成長の糧に変え、より良いプレイを追求し続けている。そんな彼らの積み重ねる努力が、確かな強さとなって現れてきている。今後も日々の挑戦を続け、さらなる高みを目指すRGチームの活躍に期待が集まっている。</p>
@@ -26,12 +27,12 @@
   </div>
 
   <div class="players">
-    <h1>選手一覧</h1>
+    <h2>選手一覧</h2>
     <ul class="players-list"></ul>
   </div>
 
   <div class="players-intros">
-    <h1>選手紹介</h1>
+    <h2>選手紹介</h2>
   </div>
 
   <script>
@@ -52,7 +53,7 @@
 
       const playerIntro = `
         <div class="player-intro ${player.trans}">
-          <h1>${player.name}</h1>
+          <h3>${player.name}</h3>
           <div class="player-Info">
               <ul>
                 <li>サバイバー段位: ${player.survivor_rank}</li>
