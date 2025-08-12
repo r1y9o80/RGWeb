@@ -1,89 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../index.css" />
+  <title>公式｜RG戦隊 - RGゲーミング｜第五人格チーム紹介</title>
+  <meta name="description" content="公式第五人格チーム「RG戦隊」の紹介サイト。選手プロフィールや戦績、チームの歴史や最新情報を掲載。初心者からファンまで楽しめる内容が満載。" />
+</head>
+<body class="body">
+  <header class="header">
+    <h1>RG戦隊</h1>
+    <nav>
+      <ul>
+        <li><a href="./notExist.html">公式X</a></li>
+        <li><a href="./notExist.html">公式Youtube</a></li>
+        <li><a href="./notExist.html">公式discord</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.1.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.1.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.1.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <div class="team-intro">
+    <h2>チーム紹介</h2>
+    <div class="team-intro-box">
+      <img src="./imgs/stand.png" alt="チームイメージ" />
+      <p>プレイヤー５人からなる第五人格チーム。第五人格を愛するメンバーが集まったRGチームは、日々練習と試合を重ねながら着実に力をつけている。個人のスキルアップだけでなく、チームとしての連携や戦術の共有にも力を入れており、互いに意見を出し合いながら切磋琢磨している。勝ち負けにこだわるだけでなく、ゲームの楽しさを忘れず、プレイの過程や仲間とのコミュニケーションを大切にしているのがチームの特徴だ。時には失敗や悔しい思いを経験しながらも、それを次の成長の糧に変え、より良いプレイを追求し続けている。そんな彼らの積み重ねる努力が、確かな強さとなって現れてきている。今後も日々の挑戦を続け、さらなる高みを目指すRGチームの活躍に期待が集まっている。</p>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <div class="players">
+    <h2>選手一覧</h2>
+    <ul class="players-list"></ul>
+  </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+  <div class="players-intros">
+    <h2>選手紹介</h2>
+  </div>
+
+  <script>
+    const players = [
+      {name: "RG_shion", Xaccount: "RG_Shion", img: "./imgs/RG_shion.png", survivor_rank:4, hunter_rank:5, survivor_rage: "24%", hunter_rage: "60%", survivor_well: "幸運時", hunter_well: "アイビ", history: 5, sentence:"彼はハンターとしての卓越したスキルを持ち、その冷静かつ狡猾なプレイスタイルは敵に恐怖を刻み込む。一方で、サバイバーとしての多彩な戦術も完璧にマスターし、どんな局面でもチームの勝利に貢献する。彼のキャラクターコントロールは圧倒的で、その鋭い動きと判断力は誰も追随できないレベルに達している。安定感抜群のチェイスパフォーマンスで、仲間に安心感をもたらし、ゲームの流れを確実に自分のものにするまさにチームの核とも言える存在だ。", trans: "toRight"},
+      {name: "RG_xiao", Xaccount: "RG_xiao", img: "./imgs/RG_xiao.png", survivor_rank:6, hunter_rank:3, survivor_rage: "37%", hunter_rage: "79%", survivor_well: "骨董商", hunter_well: "血の女王", history: 4, sentence:"彼はサバイバーとして類稀なるチェイススキルを誇り、どんな絶望的な状況でも相手の追撃を完璧にかわし続ける。彼の動きはまるで風のようにしなやかで、一度仕掛けられたチェイスは最後まで逃げ切ることを約束する。ハンターたちは彼の前に立つたびにその腕前に震え上がり、涙をのむしかない。まさにRG戦隊の不動のエースとして、勝利への道を切り拓く存在だ。", trans: "toLeft"},
+      {name: "RG_Felix", Xaccount: "RG_Felix", img: "./imgs/RG_Felix.png", survivor_rank:4, hunter_rank:4, survivor_rage: "20%", hunter_rage: "60%", survivor_well: "傭兵", hunter_well: "隠者", history: 3, sentence:"彼はサバイバーとハンター、双方で高い実力を誇り、その柔軟なプレイスタイルはチームに多大な戦術的優位をもたらす。特にサバイバーとしての救助能力は圧倒的な安定感を誇り、仲間を安全に救い出すその手腕はチームの信頼を一身に集めている。また、チェイスにおいても冷静かつ的確な判断力を持ち合わせ、敵を翻弄し続けることができる。まさにRG戦隊の戦略的な要であり、勝利の鍵を握る存在だ。", trans: "toRight"},
+      {name: "RG_Dahlia", Xaccount: "./RG_Dahlia", img: "./imgs/RG_Dahlia.png", survivor_rank:4, hunter_rank:2, survivor_rage: "24%", hunter_rage: "0%", survivor_well: "空軍", hunter_well: "イタカ", history: 4, sentence:"RG戦隊の頭脳として、その深遠な第五人格の知識は誰にも匹敵しない。彼の緻密な立ち回りは試合の流れを支配し、チーム全体に勝利への確かな道筋を示す。しかし、その冷静さの裏には時折、思わぬ恐怖即死という珍しい一面も隠れており、仲間からは『要注意人物』としても一目置かれている。それもまた彼の魅力の一つであり、RG戦隊には欠かせない存在だ。", trans: "toLeft"},
+      {name: "RG_@ネギ飯", Xaccount: "RG_Shion", img: "./imgs/RG_@ネギ飯.png", survivor_rank:4, hunter_rank:1, survivor_rage: "25%", hunter_rage: "0%", survivor_well: "幸運時", hunter_well: "アン", history: 0.2, sentence:"初心者(当社比)ながらも着実に成長を続けており、その努力と意欲はチームにとって大きな希望だ。まだまだ課題は多いものの、弱さを恐れずに前向きに挑戦し続ける姿勢は称賛に値する。時折見せる輝くプレイは、その未来の可能性を強く感じさせ、これからの活躍に期待が高まる。まさにRG戦隊の成長株として、これからの伸びしろに注目が集まっている。", trans: "toRight"}
+    ];
+
+    const playersDiv = document.querySelector(".players-list");
+    const playersIntrosDiv = document.querySelector(".players-intros");
+
+    for (const player of players) {
+      const playerDiv = `<li><img src="${player.img}" alt="${player.name}" /><p>${player.name}</p></li>`;
+      playersDiv.insertAdjacentHTML("beforeend", playerDiv);
+
+      const playerIntro = `
+        <div class="player-intro ${player.trans}">
+          <h3>${player.name}</h3>
+          <div class="player-Info">
+              <ul>
+                <li>サバイバー段位: ${player.survivor_rank}</li>
+                <li>サバイバー勝率: ${player.survivor_rage}</li>
+                <li>ハンター段位: ${player.hunter_rank}</li>
+                <li>ハンター勝率: ${player.hunter_rage}</li>
+                <li>得意サバイバー: ${player.survivor_well}</li>
+                <li>得意ハンター: ${player.hunter_well}</li>
+                <li>プレイ歴: ${player.history}年</li>
+              </ul>
+              <p>${player.sentence}</p>
+          </div>
+          <a href="https://x.com/${player.Xaccount}">Xアカウント</a>
+        </div>
+      `;
+      playersIntrosDiv.insertAdjacentHTML("beforeend", playerIntro);
+    }
+
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // 一回だけ発動
         }
       });
-    </script>
-  </body>
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.player-intro').forEach(el => {
+      observer.observe(el);
+    });
+
+  </script>
+</body>
 </html>
