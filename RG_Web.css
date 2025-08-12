@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-color: #f5f7fa; /* 淡いグレー系 */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100svw;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100svw;
+  background-color: #1e2a47; /* 濃いネイビー */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+}
+
+.header h1 {
+  margin: 0 40px 0 50px; /* 上 0 右 40px 下 0 左 50px */
+  color: #f0f4f8;
+  font-size: 50px;
+  flex-shrink: 0;
+}
+
+
+.header ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  gap: 25px;
+}
+
+.header ul li {
+  white-space: nowrap;
+}
+
+.header ul li a {
+  color: #a8b9d9; /* 淡い青灰色 */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.header ul li a:hover {
+  color: #f9ae4f; /* アクセントのやさしいオレンジ */
+  text-decoration: underline;
+}
+
+.team-intro {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: #d9e6f2; /* 淡いスカイブルー */
+  box-shadow: 0 3px 8px rgba(30, 42, 71, 0.15);
+  padding: 20px;
+}
+
+.team-intro-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.team-intro-box img {
+  width: 40%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 2px 6px rgba(30, 42, 71, 0.2);
+}
+
+.team-intro-box p {
+  background-color: #f0f4f8; /* 淡いホワイト */
+  text-decoration: underline #f9ae4f; /* アンダーラインはアクセントオレンジ */
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 18px;
+  color: #33475b; /* 落ち着いたネイビーブルー */
+  line-height: 1.5;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.players h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e2a47;
+  margin-bottom: 15px;
+}
+
+.players-list {
+  background-color: #c6d9f1; /* 薄いブルー */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  list-style: none;
+  padding: 20px;
+  gap: 25px;
+  box-shadow: 0 3px 6px rgba(30, 42, 71, 0.1);
+}
+
+.players-list li {
+  height: 160px;
+  margin: 0;
+  list-style: none;
+  background-color: #eaf0fb; /* さらに淡いブルー */
+  border-radius: 10px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(30, 42, 71, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.players-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(30, 42, 71, 0.2);
+}
+
+.players-list li img {
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.players-list li p {
+  font-weight: 600;
+  color: #1e2a47;
+  font-size: 16px;
+  text-align: center;
+  user-select: none;
+}
+
+.players-intros {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 8px;
+  margin: 30px 0;
+  background-color: #eef4fc; /* 優しい薄青 */
+  box-shadow: 0 4px 12px rgba(30, 42, 71, 0.1);
+  padding: 25px;
+}
+
+.toRight { transform: translateX(50px); }
+.toLeft  { transform: translateX(-50px); }
+
+.player-intro {
+  width: 100%;
+  margin: 15px 0 40px;
+  border-radius: 8px;
+  background-color: #d7e3f2; /* 明るいブルー */
+  box-shadow: 0 2px 8px rgba(30, 42, 71, 0.15);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+
+.player-intro.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.player-Info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 15px;
+}
+
+.player-Info ul {
+  background-color: #8faadc; /* 落ち着いたブルー */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 20px;
+  color: #f0f4f8;
+  font-weight: 600;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.player-Info ul li {
+  list-style: none;
+  border-bottom: 2px solid #f9ae4f; /* アクセントカラーのオレンジ */
+  width: 100%;
+  margin: 12px 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.player-Info ul li:hover {
+  border-color: #f6c46c;
+}
+
+.player-Info p {
+  background-color: #5b7db1; /* 深みのあるブルーグリーン */
+  width: 50%;
+  padding: 20px;
+  margin: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #f0f4f8;
+  font-size: 20px;
+  line-height: 2;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
